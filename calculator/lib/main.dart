@@ -62,16 +62,25 @@ class _CalculationScreenState extends State<CalculationScreen> {
         // screens with final result and input
         Container(
             color: Colors.grey.shade300,
-            padding: EdgeInsets.all(20),
+            padding: EdgeInsets.all(7),
             alignment: Alignment.centerRight,
             child: Column(
               children: <Widget>[
                 Text(
                   userInput,
-                  style: TextStyle(color: Colors.black54, fontSize: 35.0),
+                  style: TextStyle(color: Colors.black54, fontSize: 30.0),
                   textAlign: TextAlign.right,
                 ),
+              ],
+            )),
+        Container(
+            color: Colors.grey.shade300,
+            padding: EdgeInsets.all(15),
+            alignment: Alignment.centerRight,
+            child: Column(
+              children: <Widget>[
                 Text(answer,
+                    textDirection: TextDirection.ltr,
                     style: TextStyle(fontSize: 30.0),
                     textAlign: TextAlign.right),
               ],
@@ -82,6 +91,7 @@ class _CalculationScreenState extends State<CalculationScreen> {
           thickness: 5.0,
           height: 5.0,
         ),
+
         // button placement
         Expanded(
             child: GridView.builder(
