@@ -136,14 +136,16 @@ class _CalculationScreenState extends State<CalculationScreen> {
                             }
                           }
                           // Equals button
-                          else if (i == 12 && userInput != '') {
-                            setState(() {
-                              Parser p = new Parser();
-                              Expression expression = p.parse(userInput);
-                              answer = expression
-                                  .evaluate(EvaluationType.REAL, null)
-                                  .toString();
-                            });
+                          else if (i == 12) {
+                            if (userInput != '') {
+                              setState(() {
+                                Parser p = new Parser();
+                                Expression expression = p.parse(userInput);
+                                answer = expression
+                                    .evaluate(EvaluationType.REAL, null)
+                                    .toString();
+                              });
+                            }
                           }
 
                           // Answer memory

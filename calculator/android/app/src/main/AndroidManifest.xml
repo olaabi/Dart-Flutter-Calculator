@@ -2,7 +2,7 @@
     package="com.example.calculator">
    <application
         android:label="My Calculator"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/images">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
